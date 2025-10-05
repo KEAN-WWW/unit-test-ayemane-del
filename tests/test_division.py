@@ -1,7 +1,12 @@
 import pytest
-def test_division():
-    pass
+from app.calculator import Calculator
 
-def test_divide_zero_exception():
-    with pytest.raises(ZeroDivisionError):
-        pass
+calc = Calculator()
+
+def test_division():
+    assert calc.divide(10, 2) == 5
+    assert calc.divide(-15, 3) == -5
+
+def test_divide_by_zero():
+    with pytest.raises(ValueError):
+        calc.divide(10, 0)
