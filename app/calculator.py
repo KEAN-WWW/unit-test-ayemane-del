@@ -14,7 +14,6 @@ def divide(a, b):
         raise ValueError("Cannot divide by zero")
     return a / b
 
-
 class Calculator:
     """Simple calculator using arithmetic functions."""
 
